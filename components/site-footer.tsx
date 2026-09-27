@@ -7,9 +7,22 @@ export function SiteFooter() {
         <p className="display text-lg italic text-[var(--bone-dim)]">
           Quiet production is the product.
         </p>
-        <p className="font-mono text-[0.7rem] tracking-wider">
-          © 2026 {profile.name}
-        </p>
+        <div className="flex items-center gap-4 font-mono text-[0.7rem] tracking-wider">
+          <a href={`mailto:${profile.email}`} className="transition hover:text-[var(--gold-2)]">
+            {profile.email}
+          </a>
+          <span className="text-[var(--line)]">·</span>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-[var(--blue-2)]"
+          >
+            LinkedIn
+          </a>
+          <span className="text-[var(--line)]">·</span>
+          <span>© 2026 {profile.name}</span>
+        </div>
       </div>
     </footer>
   );

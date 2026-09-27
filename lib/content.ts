@@ -170,6 +170,45 @@ export const experience = [
   },
 ];
 
+export const services = [
+  {
+    title: "Kubernetes & Cloud Platform Builds",
+    accent: "var(--blue)",
+    copy: "EKS or GKE stood up from zero — networking, ingress, autoscaling, Helm charts, and least-privilege IAM — handed over as a platform your team can actually run.",
+    deliverables: ["Cluster architecture & IaC", "Helm charts + GitOps repo", "IAM & network policy"],
+  },
+  {
+    title: "CI/CD & GitOps Pipelines",
+    accent: "var(--teal)",
+    copy: "Jenkins, GitHub Actions, or Argo CD wired into a single promotion path, so every service ships the same way, every time — no snowflake pipelines.",
+    deliverables: ["Pipeline design & templating", "Argo CD / GitOps migration", "CAB-aware release gates"],
+  },
+  {
+    title: "Cloud Cost & FinOps",
+    accent: "var(--gold)",
+    copy: "Right-sizing, Reserved/Spot mix, and autoscaling policy tuned against real traffic — the same approach that recovered thousands a month without touching uptime.",
+    deliverables: ["Spend audit & quick wins", "Reserved / Spot strategy", "Ongoing cost guardrails"],
+  },
+  {
+    title: "SRE & Observability",
+    accent: "var(--violet)",
+    copy: "Prometheus, Grafana, and APM wired to SLAs that mean something, plus the runbooks and dashboards so an incident is a checklist, not a fire drill.",
+    deliverables: ["SLOs & alerting design", "Dashboards & APM setup", "Incident runbooks"],
+  },
+  {
+    title: "Security & Compliance",
+    accent: "var(--coral)",
+    copy: "SSO/SAML, least-privilege IAM, SonarQube and Trivy gates, and the evidence trail that makes SOC2 and banking audits a formality, not a scramble.",
+    deliverables: ["SOC2 / audit readiness", "DevSecOps gates in CI", "Vault & secrets hygiene"],
+  },
+  {
+    title: "Fractional On-call & Reliability",
+    accent: "var(--amber)",
+    copy: "Ongoing platform ownership for teams that need senior coverage without a full-time hire — pages, patches, and the occasional 2 a.m. incident, handled.",
+    deliverables: ["Monthly reliability retainer", "On-call coverage", "Quarterly platform review"],
+  },
+];
+
 export const credentials = [
   "AWS Certified DevOps Engineer — Professional",
   "Google Professional Cloud Architect",

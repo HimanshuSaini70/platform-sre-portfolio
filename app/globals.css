@@ -10,6 +10,18 @@
   --gold: #c9a56a;
   --gold-2: #e0c48a;
   --line: rgba(201, 165, 106, 0.22);
+
+  /* vibrant accent system — each major section gets its own hue */
+  --teal: #2dd4bf;
+  --teal-2: #5eead4;
+  --violet: #a78bfa;
+  --violet-2: #c4b5fd;
+  --coral: #fb7185;
+  --coral-2: #fda4af;
+  --blue: #38bdf8;
+  --blue-2: #7dd3fc;
+  --amber: #fbbf24;
+
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
@@ -24,6 +36,11 @@
   --color-mute: var(--mute);
   --color-gold: var(--gold);
   --color-gold-2: var(--gold-2);
+  --color-teal: var(--teal);
+  --color-violet: var(--violet);
+  --color-coral: var(--coral);
+  --color-blue: var(--blue);
+  --color-amber: var(--amber);
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
   --font-mono: var(--font-mono);
@@ -39,8 +56,10 @@ body {
   color: var(--bone);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   background-image:
-    radial-gradient(ellipse 90% 55% at 8% -8%, rgba(201, 165, 106, 0.11), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(90, 70, 40, 0.18), transparent 50%),
+    radial-gradient(ellipse 70% 45% at 6% -6%, rgba(201, 165, 106, 0.14), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 100% 4%, rgba(45, 212, 191, 0.1), transparent 52%),
+    radial-gradient(ellipse 60% 45% at 90% 60%, rgba(167, 139, 250, 0.09), transparent 55%),
+    radial-gradient(ellipse 50% 35% at 0% 75%, rgba(251, 113, 133, 0.07), transparent 55%),
     linear-gradient(180deg, #0a0908 0%, #0c0b09 40%, #090807 100%);
   min-height: 100%;
 }
@@ -95,4 +114,48 @@ body::before {
 .metric-num {
   font-variant-numeric: lining-nums;
   letter-spacing: -0.04em;
+}
+
+.grad-text {
+  background: linear-gradient(100deg, var(--gold-2), var(--teal-2) 55%, var(--violet-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.panel-glow {
+  position: relative;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.panel-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -22px var(--glow-color, rgba(201, 165, 106, 0.45));
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--bone-dim);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.chip:hover {
+  color: var(--bone);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dot {
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 999px;
+  flex-shrink: 0;
 }

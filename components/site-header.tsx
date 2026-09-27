@@ -5,6 +5,7 @@ const links = [
   { href: "#work", label: "Work" },
   { href: "#craft", label: "Craft" },
   { href: "#stack", label: "Stack" },
+  { href: "#services", label: "Services" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -13,9 +14,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[#0a0908]/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-8">
         <a href="#top" className="flex items-baseline gap-3">
-          <span className="display text-xl font-semibold tracking-tight text-[var(--gold)]">
-            HS
-          </span>
+          <span className="display grad-text text-xl font-semibold tracking-tight">HS</span>
           <span className="hidden text-[0.7rem] uppercase tracking-[0.28em] text-[var(--mute)] sm:inline">
             Platform · SRE
           </span>
